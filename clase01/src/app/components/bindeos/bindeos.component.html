@@ -1,0 +1,17 @@
+<h1>Bindeos</h1>
+
+<h1>{{ title }}</h1> <!-- BINDING - BINDEO DESDE TS AL HTML - TEXTO, PARA RENDERIZADO -->
+
+<button (click)="mostrarTitle()" >Mostrar</button> <!-- BINDEO DESDE EL HTML AL TS - EVENTOS -->
+
+<h1 [className]="estilos" >Título estático</h1><!-- BINDING - BINDEO DESDE TS AL HTML - ATRIBUTOS HTML-->
+
+<!-- DOBLE BINDEO -->
+<input type="text" [(ngModel)]="nombre"/>
+<button (click)="borrarNombre()">Mostrar</button> <!-- BINDEO DESDE EL HTML AL TS - EVENTOS -->
+<span>{{nombre}}</span>
+
+<h1>Componentes</h1>
+
+<app-bienvenida></app-bienvenida>
+<app-login></app-login>
