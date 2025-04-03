@@ -3,7 +3,7 @@
 ### Importante:
 Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 
-## Clase 01
+## Clase 01 - 01/04/2025
 
 ### Introducción Angular
 -   Angular
@@ -23,3 +23,9 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 - [Generar componentes](https://angular.dev/cli/generate/component)
 - [Ruteo (faltan cosas por ver)](https://angular.dev/guide/routing/common-router-tasks)
 - [Navegación (faltan cosas por ver)](https://angular.dev/guide/routing/router-tutorial)
+
+## Clase 02 - 03/04/2025
+
+### titulo
+
+## Documentación Clase 02
