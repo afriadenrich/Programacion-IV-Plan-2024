@@ -1,0 +1,22 @@
+<h1>Botones</h1>
+
+@for (b of botones; track b.nombre; let i = $index) {
+    <button class="btn btn-outline-dark">
+        <strong>{{ i + " - " + b.letra }}</strong>
+        {{ b.nombre }}
+    </button>
+}
+
+<!--
+@for (boton of botones; track $index) {
+}-->
+
+<!--
+    for (botones) {
+        <button>letra + nombre</button>
+    }
+    
+    <button>B Block</button>
+    <button>C Class</button>
+    <button>@ Decorator</button>
+-->

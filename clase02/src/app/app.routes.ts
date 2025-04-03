@@ -3,6 +3,7 @@ import { RegistrosComponent } from './pages/registros/registros.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
 import { InfoComponent } from './pages/info/info.component';
+import { ListadoComponent } from './pages/listado/listado.component';
 
 export const routes: Routes = [{
     "path": "registros", component: RegistrosComponent,
@@ -12,4 +13,6 @@ export const routes: Routes = [{
     "path": "bienvenida", component: BienvenidaComponent
 }, {
     "path": "info", component: InfoComponent
+}, {
+    "path": "botones", component: ListadoComponent
 }];
