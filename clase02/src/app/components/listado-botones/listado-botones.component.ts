@@ -1,5 +1,5 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
+import { Boton } from '../../interfaces/boton';
 
 @Component({
   selector: 'app-listado-botones',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './listado-botones.component.css'
 })
 export class ListadoBotonesComponent {
-  botones = [{
+  botones: InputSignal<Boton[]> = input([{
     nombre: "Block",
     letra: "B"
   }, {
@@ -17,5 +17,11 @@ export class ListadoBotonesComponent {
   }, {
     nombre: "Decorator",
     letra: "@"
-  }];
+  }, {
+    nombre: "", 
+    letra: ""
+  }] as Boton[]);
 }
+
+// 1- any -> cualquier cosa
+// 2- estructura / clase / interfaz para definir el tipo
