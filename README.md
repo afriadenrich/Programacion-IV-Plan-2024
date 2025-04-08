@@ -26,6 +26,12 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 
 ## Clase 02 - 03/04/2025
 
-### titulo
+### Ciclo de vida del componente - Input y output
 
 ## Documentación Clase 02
+
+- [Hooks de Ciclo de vida](https://angular.dev/guide/components/lifecycle)
+- [Input de datos al componente](https://angular.dev/guide/components/inputs)
+- [Output de datos al componente](https://angular.dev/guide/components/outputs)
+- [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
+
