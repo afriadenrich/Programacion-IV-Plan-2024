@@ -1,0 +1,51 @@
+<h1>Registro</h1>
+
+<!-- @if(formulario) -->
+@if(formulario !== undefined){
+
+<form [formGroup]="this.formulario">
+  <!--Nombre-->
+  <div>
+    <label>Nombre</label>
+    <input type="text" formControlName="nombre" />
+
+    @if(nombre?.errors !== null && nombre?.touched){
+    @if(nombre?.hasError("required")) {
+    <p>El nombre es requerido</p>
+    } @if (nombre?.hasError("minlength")) {
+    <p>El nombre requiere 3 caracteres</p>
+    } @if (nombre?.hasError("maxlength")) {
+    <p>El nombre requiere máximo 15 caracteres</p>
+    } }
+  </div>
+  <div>
+    <!--Apellido-->
+    <label>Apellido</label>
+    <input type="text" formControlName="apellido" />
+
+    @if(apellido?.errors !== null && apellido?.touched){
+    @if(apellido?.hasError("required")) {
+    <p>El apellido es requerido</p>
+    } @if (apellido?.hasError("minlength")) {
+    <p>
+      El apellido requiere
+      {{ apellido?.getError("minlength").requiredLength }} caracteres
+    </p>
+    } @if (apellido?.hasError("maxlength")) {
+    <p>
+      El apellido requiere máximo
+      {{ apellido?.getError("maxlength").requiredLength }} caracteres
+    </p>
+    } }
+  </div>
+  <button (click)="mostrarFormulario()" class="btn btn-primary">Mostrar</button>
+  <button (click)="validarFormulario()" class="btn btn-primary">Validar</button>
+  <button
+    (click)="guardarDatos()"
+    [disabled]="!this.formulario.valid"
+    class="btn btn-primary"
+  >
+    Guardar datos
+  </button>
+</form>
+}

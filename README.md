@@ -26,7 +26,7 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 
 ## Clase 02 - 03/04/2025
 
-### Ciclo de vida del componente - Input y output
+### Ciclo de vida del componente - Input y output - Directivas estructurales
 
 ## Documentación Clase 02
 
