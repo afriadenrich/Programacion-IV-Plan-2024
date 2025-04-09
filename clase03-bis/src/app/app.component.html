@@ -1,0 +1,10 @@
+<!--SPA -> Single page application-->
+<input type="text" [(ngModel)]="nombre" />
+
+<button (click)="traer()">Traer</button>
+
+@if(this.apiService.pokemonActual) {
+
+<img [src]="this.apiService.pokemonActual.sprites.front_default" />
+
+}

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -8,13 +9,24 @@ import { FormsModule, ReactiveFormsModule, FormGroup, FormControl, Validators } 
   styleUrl: './registro.component.css'
 })
 export class RegistroComponent implements OnInit {
+  // Servicios:
+  // Injectar el servicio
+  // Antes
+  // constructor(private auth: AuthService, private x: AlgoService,) {
+  //   console.log(auth.usuario);
+  // }
 
+  // Ahora
+  auth = inject(AuthService);
+
+  // Formularios:
   formulario?: FormGroup;
 
   ngOnInit(){
    // const formBuilder = new FormBuilder();
    // const formulario = formBuilder.group({ ... });
-    
+   console.log(this.auth.usuario);
+
    this.formulario = new FormGroup({
      nombre: new FormControl("", 
       { validators: [Validators.minLength(3), Validators.required, Validators.maxLength(15)] }),
@@ -40,7 +52,7 @@ export class RegistroComponent implements OnInit {
 // TODO OK!
 
     console.log(this.formulario.value);
-
+    this.auth.guardarUsuario(this.nombre?.value, this.apellido?.value);
   }
 
   get nombre() {
