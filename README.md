@@ -41,7 +41,8 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 
 ## Documentación Clase 03
 
-- [Validación de formularios]()
+- [Formularios](https://angular.dev/guide/forms/reactive-forms)
+- [Validación de formularios](https://angular.dev/guide/forms/form-validation)
 - [Inyección de dependencias](https://angular.dev/guide/di/dependency-injection)
 - [Servicios](https://angular.dev/guide/di/creating-injectable-service)
 - [HttpClient](https://angular.dev/guide/http/setup)
