@@ -35,3 +35,17 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 - [Output de datos al componente](https://angular.dev/guide/components/outputs)
 - [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
 
+## Clase 03 - 08/04/2025
+
+### Validación de Formularios - Servicios - HTTPClient 
+
+## Documentación Clase 03
+
+- [Validación de formularios]()
+- [Inyección de dependencias](https://angular.dev/guide/di/dependency-injection)
+- [Servicios](https://angular.dev/guide/di/creating-injectable-service)
+- [HttpClient](https://angular.dev/guide/http/setup)
+- [Peticiones HTTP](https://angular.dev/guide/http/making-requests)
+- [Observables](https://rxjs.dev/guide/observable)
+
+## Clase 04 - 10/04/2025
