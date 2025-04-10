@@ -34,6 +34,9 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 - [Input de datos al componente](https://angular.dev/guide/components/inputs)
 - [Output de datos al componente](https://angular.dev/guide/components/outputs)
 - [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
+- [@if](https://angular.dev/api/core/@if)
+- [@for](https://angular.dev/api/core/@for)
+- [@switch](https://angular.dev/api/core/@switch)
 
 ## Clase 03 - 08/04/2025
 
