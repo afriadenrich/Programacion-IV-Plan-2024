@@ -53,3 +53,11 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 - [Observables](https://rxjs.dev/guide/observable)
 
 ## Clase 04 - 10/04/2025
+
+
+
+
+
+### Más proyectos:
+
+- (Otros repos)[https://github.com/afriadenrich?tab=repositories&q=labo&type=&language=&sort=]

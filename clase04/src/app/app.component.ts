@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DatabaseService } from './services/database.service';
+import { createClient } from '@supabase/supabase-js';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'clase04';
+  databaseSerice = inject(DatabaseService);
+
 }

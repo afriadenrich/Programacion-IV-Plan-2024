@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, OnChanges, output } from '@angular/core';
 import { Auto } from '../../../classes/auto';
 
 @Component({
@@ -11,6 +11,10 @@ export class ListadoAutoComponent {
   autos = input<Auto[]>([]);
   enviarUnAuto = output<Auto>();
   enviarUnIndice = output<number>();
+
+ mostrar(){
+  console.log(this.autos());
+ }
 
   seleccionarUnAuto(auto: Auto){
     this.enviarUnAuto.emit(auto);
