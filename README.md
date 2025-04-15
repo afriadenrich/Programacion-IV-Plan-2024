@@ -54,9 +54,15 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 
 ## Clase 04 - 10/04/2025
 
+- Fin input y output
+- Supabase DB
 
+## Documentación Clase 04
 
-
+- [Supabase](http://supabase.com/)
+- [Documentación Supabase](https://supabase.com/docs)
+- [Documentación Supabase Database](https://supabase.com/docs/guides/database/overview)
+- [Supabase Database Guía](https://supabase.com/docs/guides/database/tables?queryGroups=language&language=js)
 
 ### Más proyectos:
 
