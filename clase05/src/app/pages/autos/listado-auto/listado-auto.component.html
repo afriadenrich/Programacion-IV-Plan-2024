@@ -1,0 +1,10 @@
+<h1>Listado</h1>
+@for(auto of autos(); track auto; let indice = $index) {
+<div>
+  <h4>{{ auto.marca }}</h4>
+  <p>{{ auto.modelo + " $" + auto.precio }}</p>
+  <button (click)="seleccionarUnAuto(auto)">Seleccionar</button>
+  <button (click)="seleccionarUnInidice(indice)">Eliminar</button>
+</div>
+}
+<button (click)="mostrar()">Mostrar</button>

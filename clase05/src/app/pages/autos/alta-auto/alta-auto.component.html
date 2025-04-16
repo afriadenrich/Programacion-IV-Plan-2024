@@ -1,0 +1,11 @@
+<form [formGroup]="formulario">
+  <input type="text" formControlName="modelo" />
+  <input type="text" formControlName="marca" />
+  <input type="number" formControlName="precio" />
+  <button (click)="guardar()">Guardar</button>
+</form>
+
+<!-- <input [(ngModel)]="marca">
+<input [(ngModel)]="modelo">
+<input [(ngModel)]="precio">
+<button (click)="guardar()">Guardar</button> -->

@@ -1,0 +1,14 @@
+@if(this.authService.user() !== null){
+<button routerLink="">Home</button>
+
+<button (click)="cerrarSesion()">Cerrar sesion</button>
+<h1>Hola! {{ this.authService.user()!.email }}</h1>
+} @else {
+<button routerLink="login">Login</button>
+<button routerLink="registro">Registro</button>
+
+<button (click)="crearCuenta()">Registrarse</button>
+<button (click)="iniciarSesion()">Iniciar sesion</button>
+}
+
+<router-outlet />

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { createClient, RealtimeChannel, SupabaseClient } from '@supabase/supabase-js';
 import { Auto } from '../classes/auto';
 import { PostgrestQueryBuilder } from "@supabase/postgrest-js";
 
@@ -9,11 +9,24 @@ import { PostgrestQueryBuilder } from "@supabase/postgrest-js";
 export class DatabaseService {
   supabase: SupabaseClient<any, "public", any>;
   tablaAutos: PostgrestQueryBuilder<any, any, "autos", unknown>;
+  canal: RealtimeChannel;
 
   constructor() { 
     this.supabase = createClient("https://ifbdcuispaelyipwwpij.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmYmRjdWlzcGFlbHlpcHd3cGlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzMjYzMzgsImV4cCI6MjA1OTkwMjMzOH0.ddFnhC_Y1cxt_lHKye0lbDAaOpa4eG9kKc3r7FYwD-I");
     this.tablaAutos = this.supabase.from("autos");
+
+    this.canal = this.supabase.channel("schema-db-changes");
+    // canal.on('postgres_changes', {
+    //   event: '*',
+    //   schema: 'public'
+    // }, (payload) => {
+    //   // Esto sólo se ejecuta cuando haya algún cambio
+    //   console.log(payload);
+    // });
+
   }
+
+
 
 //crear(auto, auto1, auto2, auto3)
 // crear([auto, auto1, auto2, auto3]);
@@ -31,7 +44,7 @@ export class DatabaseService {
 
   async listar(): Promise<Auto[] | []> {
                                   // SELECT marca, modelo, precio FROM autos
-    const {data, error} = await this.tablaAutos.select("marca, modelo, precio");
+    const {data, error} = await this.tablaAutos.select("id, marca, modelo, precio");
 
     console.log(data);
     if(error){

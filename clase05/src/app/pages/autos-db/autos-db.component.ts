@@ -15,15 +15,46 @@ export class AutosDBComponent implements OnInit {
   db = inject(DatabaseService);
 
   autos = signal<Auto[]>([]);
+  autoSelecionado?: Auto;
 
+  ngOnInit() {
+    this.db.canal.on(
+      'postgres_changes',
+      {
+        event: '*', // insert, update, delete, * (todos)
+        schema: 'public',
+      },
+      (payload) => {
+        switch (payload.eventType) {
+          case "INSERT":
+            const nuevoAuto = payload.new as Auto;
+            this.autos.update((autosAnterior) => {
+              autosAnterior.push(nuevoAuto);
+              
+              console.log("El nuevo auto es: ", nuevoAuto);
+              
+              return [...autosAnterior];
+            })
+            break;
+          
+          case "UPDATE":
+            // hago algo
+            break;
+          
+          case "DELETE":
+            // hago algo
+            break;
+        }
+      }
+    );
 
-ngOnInit(){
+  this.db.canal.subscribe();
+
   this.db.listar().then((autos) => {
 
-    console.log(autos);
+    //console.log(autos);
     const copy: Auto[] = [];
-    autos.forEach((a) => {
-      if(!this.autos().includes(a)) {
+    autos.forEach((a) => {if(!this.autos().includes(a)) {
       copy.push(a);
     }});
 
@@ -36,7 +67,7 @@ ngOnInit(){
     this.db.crear(auto);
   }
 
-  autoSelecionado?: Auto;
+  
 
   obtenerAutoSeleccionado(auto: Auto){
     this.autoSelecionado = auto;

@@ -64,6 +64,13 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 - [Documentación Supabase Database](https://supabase.com/docs/guides/database/overview)
 - [Supabase Database Guía](https://supabase.com/docs/guides/database/tables?queryGroups=language&language=js)
 
+
+## Clase 05 - 15/04/25
+
+https://supabase.com/docs/guides/realtime/subscribing-to-database-changes
+
+
 ### Más proyectos:
+
 
 - (Otros repos)[https://github.com/afriadenrich?tab=repositories&q=labo&type=&language=&sort=]

@@ -1,0 +1,7 @@
+<app-alta-auto (enviarAuto)="agregarAuto($event)"></app-alta-auto>
+<app-listado-auto
+  [autos]="autos()"
+  (enviarUnAuto)="obtenerAutoSeleccionado($event)"
+  (enviarUnIndice)="eliminar($event)"
+></app-listado-auto>
+<app-detalle-auto [auto]="autoSelecionado"></app-detalle-auto>
