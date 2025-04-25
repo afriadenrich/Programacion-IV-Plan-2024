@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from './services/auth.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,6 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   authService = inject(AuthService);
-  title = 'clase06';
-
+  title = environment.dato;
 
 }
