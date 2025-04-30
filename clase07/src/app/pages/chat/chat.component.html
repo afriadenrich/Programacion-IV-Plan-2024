@@ -1,0 +1,11 @@
+<h1>Bienvenid al chat</h1>
+
+<div>
+  @for (m of chat(); track m.id) {
+  <div>
+    <h4>{{ m.created_at }}</h4>
+    <h3>{{ m.usuarios?.nombre }}</h3>
+    <p>{{ m.mensaje }}</p>
+  </div>
+  }
+</div>

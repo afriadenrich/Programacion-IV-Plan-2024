@@ -1,10 +1,10 @@
 import { inject } from '@angular/core';
-import { CanActivateFn } from '@angular/router';
+import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
-
+const router = inject(Router);
   console.log("Entro al guard");
 
   if (authService.usuario !== null) {
@@ -12,6 +12,7 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   } else {
     // No deja pasar
+    router.navigateByUrl("/login");
     return false;
   }
 

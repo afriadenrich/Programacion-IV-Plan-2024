@@ -1,0 +1,42 @@
+<h1>Pipes</h1>
+<p>{{ moneda | currency }}</p>
+<p>{{ moneda | currency : "USD" : "code" : "1.1-1" }}</p>
+<p>{{ 0.5 | percent }}</p>
+<!--
+    code
+    symbol
+    symbol-narrow
+-->
+<p>{{ frase | uppercase }}</p>
+<p>{{ frase | lowercase }}</p>
+<p>{{ frase | titlecase }}</p>
+<p>{{ fraseLarga | slice : 0 : 30 }}... <a href="#">ver más</a></p>
+<!-- <p>{{ palabra }}</p> -->
+<p>{{ fechaNumero | date : "short" : "+9" : "en-US" }}</p>
+<p>{{ fecha }}</p>
+<p>{{ usuario | json }}</p>
+
+<p>{{ fechaNumero | date : "short" : "+9" : "en-US" }}</p>
+
+<p>{{ "Agus" | saludar : "Chao " : "Prof. " : "?" }}</p>
+
+<h1>Directivas</h1>
+<h2>Directivas de atributo</h2>
+<h3>De Angular</h3>
+
+<input type="text" />
+<div style="background-color: red; height: 20px"></div>
+<div
+  [ngStyle]="
+    false
+      ? { 'background-color': 'green', height: '20px' }
+      : { 'background-color': 'purple', height: '20px' }
+  "
+></div>
+
+<p appResaltar>P</p>
+<h1 appResaltar>h1</h1>
+<div appResaltar>div</div>
+<h5 appResaltar>h5</h5>
+
+<p class="resaltar">Resaltar</p>

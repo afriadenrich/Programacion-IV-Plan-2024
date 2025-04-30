@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  usuario : string | null = null;
+  usuario : string | null = "null";
 
   constructor() { }
 }
