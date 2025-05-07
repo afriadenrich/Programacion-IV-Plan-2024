@@ -1,0 +1,19 @@
+{{ title }}
+<br />
+<br />
+<br />
+<br />
+<button (click)="iniciarSesion()">Iniciar Sesion</button>
+<button (click)="cerrarSesion()">Cerrar Sesion</button>
+<button (click)="crearCuenta()">Crear Cuenta</button>
+
+<h4 appHighlight color="red">Usuario del auth</h4>
+<p appHighlight color="purple">{{ auth.user() | json }}</p>
+<h4 appHighlight color="#aaaaaa">Usuario de la DB</h4>
+<p appHighlight [color]="variableColor">{{ auth.userDB() | json }}</p>
+
+<img src="tren1.jpg" />
+<img src="tren2.jpg" />
+<img src="tren4.jpg" />
+
+<router-outlet />
