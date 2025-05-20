@@ -14,7 +14,7 @@ export class AuthService {
   constructor() {
     this.supabase = createClient(
       'https://ifbdcuispaelyipwwpij.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmYmRjdWlzcGFlbHlpcHd3cGlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzMjYzMzgsImV4cCI6MjA1OTkwMjMzOH0.ddFnhC_Y1cxt_lHKye0lbDAaOpa4eG9kKc3r7FYwD-I'
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmYmRjdWlzcGFlbHlpcHd3cGlqIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDMyNjMzOCwiZXhwIjoyMDU5OTAyMzM4fQ.NI5IPLTKmK0Ytan3jhuSMkwvlGn0iA-qwXsuIqyaroQ'
     );
     
     // const mensajes = await this.supabase.from("chat").select("mensaje, created_at, usuarios (nombre)")

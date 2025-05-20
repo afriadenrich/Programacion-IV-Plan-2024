@@ -1,0 +1,6 @@
+<p>upload works!</p>
+
+<!-- <input type="file" [(ngModel)]="archivo" /> -->
+<input type="file" (change)="onChange($event)" />
+
+<button (click)="guardar()">Guardar</button>
