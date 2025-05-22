@@ -4,7 +4,7 @@ import { CreateUsuarioDto } from './dto/create-usuario.dto';
 import { UpdateUsuarioDto } from './dto/update-usuario.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Usuario } from './entities/usuario.entity';
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 
 @Injectable()
 export class UsuariosService {
@@ -24,19 +24,23 @@ constructor(@InjectModel(Usuario.name) private usuarioModel: Model<Usuario>) {
     return guardado;
   }
 
-  findAll() {
-    return `This action returns all usuarios`;
+  async findAll() {
+    const todos: Usuario[] = await this.usuarioModel.find()
+    return todos;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} usuario`;
+  async findOne(id: number) {
+    const uno = await this.usuarioModel.findById(id);
+    return uno;
   }
 
-  update(id: number, updateUsuarioDto: UpdateUsuarioDto) {
-    return `This action updates a #${id} usuario`;
+  async update(id: number, updateUsuarioDto: UpdateUsuarioDto) {
+    const editado = await this.usuarioModel.updateOne({ nombre: "Yo"}, { apellido: "OTRO"});
+    return editado;
   }
-
-  remove(id: number) {
-    return `This action removes a #${id} usuario`;
+  
+  async remove(id: number) {
+    const eliminado = await this.usuarioModel.deleteOne({apellido: "OTRO"});
+    return eliminado;
   }
 }
