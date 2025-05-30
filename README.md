@@ -70,6 +70,19 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 https://supabase.com/docs/guides/realtime/subscribing-to-database-changes
 
 
+## Clase 06 - 24/04/25
+
+## Clase 07 - 29/04/25
+
+## Clase 08 - 06/05/25
+
+## Clase 09 - 
+
+## Clase 10
+
+## Clase 11
+
+
 ### Más proyectos:
 
 
