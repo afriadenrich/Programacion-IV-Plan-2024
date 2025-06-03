@@ -1,34 +1,39 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Request,
+  Headers,
+  Ip,
+} from '@nestjs/common';
 import { AutenticacionService } from './autenticacion.service';
-import { CreateAutenticacionDto } from './dto/create-autenticacion.dto';
-import { UpdateAutenticacionDto } from './dto/update-autenticacion.dto';
 
 @Controller('autenticacion')
 export class AutenticacionController {
   constructor(private readonly autenticacionService: AutenticacionService) {}
 
-  @Post()
-  create(@Body() createAutenticacionDto: CreateAutenticacionDto) {
-    return this.autenticacionService.create(createAutenticacionDto);
+  @Post('/registro')
+  registro(@Body() body: any, @Ip() ip: string) {
+    return this.autenticacionService.registrar(body, ip);
   }
 
-  @Get()
-  findAll() {
-    return this.autenticacionService.findAll();
+  @Post('/login')
+  login(@Body() body: any, @Ip() ip: string) {
+    return this.autenticacionService.loguear(body, ip);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.autenticacionService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAutenticacionDto: UpdateAutenticacionDto) {
-    return this.autenticacionService.update(+id, updateAutenticacionDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.autenticacionService.remove(+id);
+  @Get('/datos')
+  datos(@Headers('Authorization') auth: string, @Ip() ip: string) {
+    if (auth) {
+      const token = auth?.split(' ')[1];
+      // const token = auth?.slice(7);
+      return this.autenticacionService.traerDatos(token, ip);
+    } else {
+      return 'No hay header';
+    }
   }
 }

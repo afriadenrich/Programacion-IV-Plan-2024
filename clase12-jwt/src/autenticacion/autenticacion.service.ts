@@ -1,26 +1,50 @@
 import { Injectable } from '@nestjs/common';
-import { CreateAutenticacionDto } from './dto/create-autenticacion.dto';
-import { UpdateAutenticacionDto } from './dto/update-autenticacion.dto';
+import { sign, decode, verify, JsonWebTokenError } from 'jsonwebtoken/index';
 
 @Injectable()
 export class AutenticacionService {
-  create(createAutenticacionDto: CreateAutenticacionDto) {
-    return 'This action adds a new autenticacion';
+  registrar(body: any, ip: string) {
+    // Registra etc etc ...
+
+    const { id, nombre } = body;
+    return this.crearToken(id, nombre, ip);
   }
 
-  findAll() {
-    return `This action returns all autenticacion`;
+  loguear(body: any, ip: string) {
+    // Loguea etc. etc....
+
+    const { id, nombre } = body;
+    return this.crearToken(id, nombre, ip);
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} autenticacion`;
+  traerDatos(token: string, ip: string) {
+    try {
+      const payload = verify(token, ip + 'clave-ultra-secreta');
+      return payload;
+    } catch (error: any) {
+      console.log(error);
+      return error;
+    }
   }
 
-  update(id: number, updateAutenticacionDto: UpdateAutenticacionDto) {
-    return `This action updates a #${id} autenticacion`;
-  }
+  crearToken(id, nombre, ip) {
+    const payload = {
+      id: id,
+      nombre: nombre,
+      iat: Date.now() / 1000,
+      exp: Date.now() / 1000 + 60,
+    };
+    console.log(payload);
 
-  remove(id: number) {
-    return `This action removes a #${id} autenticacion`;
+    try {
+      const token = sign(payload, ip + 'clave-ultra-secreta', {
+        algorithm: 'HS256',
+      });
+      console.log(token);
+      return token;
+    } catch (error) {
+      console.log(error);
+      return 'error';
+    }
   }
 }
