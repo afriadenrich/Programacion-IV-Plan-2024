@@ -27,6 +27,7 @@ export class EntidadController {
   @Post()
   @UseInterceptors(
     FileInterceptor('foto', {
+      dest: 'public/fotos',
       storage: diskStorage({
         filename(req, file, callback) {
           const nuevoNombre = Date.now() + '-' + file.originalname;
