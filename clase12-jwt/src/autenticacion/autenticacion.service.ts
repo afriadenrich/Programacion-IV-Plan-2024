@@ -1,19 +1,20 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Injectable } from '@nestjs/common';
-import { sign, decode, verify, JsonWebTokenError } from 'jsonwebtoken/index';
+import { sign, verify } from 'jsonwebtoken/index';
 
 @Injectable()
 export class AutenticacionService {
   registrar(body: any, ip: string) {
     // Registra etc etc ...
 
-    const { id, nombre } = body;
+    const { id, nombre }: any = body;
     return this.crearToken(id, nombre, ip);
   }
 
   loguear(body: any, ip: string) {
     // Loguea etc. etc....
 
-    const { id, nombre } = body;
+    const { id, nombre }: any = body;
     return this.crearToken(id, nombre, ip);
   }
 
