@@ -67,20 +67,81 @@ Este cuatrimestre utilizamos la versión: *19.2.5* de Angular
 
 ## Clase 05 - 15/04/25
 
-https://supabase.com/docs/guides/realtime/subscribing-to-database-changes
+- [Realtime](https://supabase.com/docs/guides/realtime/subscribing-to-database-changes)
+- [Autenticación](https://supabase.com/docs/guides/auth)
 
 
 ## Clase 06 - 24/04/25
+- [Guards - Guardias de ruta](https://angular.dev/guide/routing/common-router-tasks#preventing-unauthorized-access)
+- [Can Activate](https://angular.dev/api/router/CanActivateFn)
+- [Environments](https://angular.dev/tools/cli/environments#)
+- [Lazy loading](https://angular.dev/guide/routing/define-routes#lazily-loaded-components)
 
 ## Clase 07 - 29/04/25
+- [Realtime](https://supabase.com/docs/guides/realtime/subscribing-to-database-changes)
+- [Pipes](https://angular.dev/guide/templates/pipes#)
+- [Directivas](https://angular.dev/guide/directives)
+- [Directivas de atributos](https://angular.dev/guide/directives/attribute-directives)
+- [Directivas estructurales](https://angular.dev/guide/directives/structural-directives#)
 
 ## Clase 08 - 06/05/25
+- [Storage Supabase](https://supabase.com/docs/guides/storage)
+- [Guía de inicio](https://supabase.com/docs/guides/storage/quickstart?queryGroups=language&language=javascript)
+- [Subida de archivos](https://supabase.com/docs/guides/storage/uploads/standard-uploads?queryGroups=language&language=js)
+- [Obtener archivos](https://supabase.com/docs/guides/storage/serving/downloads)
 
-## Clase 09 - 
+## Pre entrega TP #1 - 08/05/25
 
-## Clase 10
+Nada por aquí...
 
-## Clase 11
+## Clase 9 - 13/05/25
+- [Vercel](https://vercel.com/)
+- [Deploy a vercel](https://vercel.com/guides/deploying-angular-with-vercel)
+- [Progressive Web Apps - PWA](https://angular.dev/ecosystem/service-workers)
+- [Comunicación con el service worker (Avanzado)](https://angular.dev/ecosystem/service-workers/communications)
+
+## Corrección TP #1 - 15/05/25
+
+Nada por aquí tampoco...
+
+## Clase 10 - 20/05/25
+
+- [NestJS](https://nestjs.com/)
+- [Documentación NestJS](https://docs.nestjs.com/)
+- [Primeros pasos](https://docs.nestjs.com/first-steps)
+- [Modulos](https://docs.nestjs.com/modules)
+- [Controllers](https://docs.nestjs.com/controllers)
+- [Providers](https://docs.nestjs.com/providers)
+- [nest generate](https://docs.nestjs.com/cli/usages#nest-generate)
+
+        nest generate --help
+
+## Clase 11 - 22/05/25
+- []()
+- []()
+- []()
+- []()
+
+## Clase 12 - 29/05/25
+- []()
+- []()
+- []()
+- []()
+
+## Clase 13 - 03/06/25
+- []()
+- []()
+- []()
+- []()
+
+## Clase 14 - 05/06/25
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+
 
 
 ### Más proyectos:
