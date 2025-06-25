@@ -3,9 +3,9 @@ import { AppModule } from './app.module';
 import { existsSync, mkdirSync } from 'node:fs';
 
 async function bootstrap() {
-  if (!existsSync('./public/images')) {
-    mkdirSync('./public/images');
-  }
+  // if (!existsSync('./public/images')) {
+  //   mkdirSync('./public/images');
+  // }
 
   const app = await NestFactory.create(AppModule);
 

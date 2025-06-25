@@ -28,7 +28,7 @@ export class BookController {
   }
 
   @Post()
-  @UseGuards(AuthGuard())
+  // @UseGuards(AuthGuard())
   async createBook(
     @Body()
     book: CreateBookDto,
